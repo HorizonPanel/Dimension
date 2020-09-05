@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/connected', 'ClientArea\IndexController@index');
+Route::get('/connected/{any}', 'ClientArea\IndexController@index')->where('any', '(.*)');
